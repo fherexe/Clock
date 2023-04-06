@@ -51,6 +51,14 @@ main {
   border: 2px solid #446eac;
 }
 
+#img-morning, #img-afternoon, #img-morning img {
+  position: absolute;
+  width: 300px;
+  top: 27%;
+  left: 5%;
+  border-radius: 50%;
+}
+
 
 
 
