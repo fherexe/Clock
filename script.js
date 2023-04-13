@@ -4,8 +4,8 @@ function clock () {
     const horas = horaAgora.getHours ();
     const minutos = horaAgora.getMinutes ();
     const segundos = horaAgora.getSeconds ();
-    const formatoHoras = horas.toString ().padStart (2, "0"); 
-    //const formatoHoras = 19
+    //const formatoHoras = horas.toString ().padStart (2, "0"); 
+    const formatoHoras = 2
     const formatoMinutos = minutos.toString ().padStart (2, "0");
     const formatoSegundos = segundos.toString ().padStart (2, "0");
          //.padStart ("0"); definir que o valor vai começar com 0
@@ -20,7 +20,9 @@ function clock () {
 
     //Array guardar varias informações, equivalente a uma váriavel, variedade, arranjo. Um dado que armazena varios elementos, estrutura de dados.
 
+    catImg = document.querySelector("#cat-img");
     hoje = new Date();
+
     frase.innerHTML = 
     `${dia[hoje.getDay()]}, 
      ${hoje.getDate().toString().padStart(2, 0)} de 
@@ -28,12 +30,12 @@ function clock () {
     ` 
     //Aspas `` libera o uso de placeholders ${}
 
+
     if (formatoHoras >=0 && formatoHoras <12) {
         document.querySelector("main").setAttribute("class","morning-box");
-
         document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')"
 
-        document.getElementById("img-morning").innerHTML = "<img src='https://i0.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1'>"
+        catImg.src='https://i0.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1';
     }
 
     else if(formatoHoras >=12 && formatoHoras <19) {
@@ -41,7 +43,7 @@ function clock () {
 
         document.querySelector("main").setAttribute("class","afternoon-box");
 
-        document.getElementById("img-morning").innerHTML = "<img src='https://media.tenor.com/NQfq1liFH-8AAAAM/byuntear-sad.gif'>"
+        catImg.src='https://media.tenor.com/NQfq1liFH-8AAAAM/byuntear-sad.gif'
     }  
 
     else {
@@ -49,7 +51,7 @@ function clock () {
 
         document.querySelector("main").setAttribute("class","night-box");
 
-        document.getElementById("img-morning").innerHTML = "<img src='https://gifs.eco.br/wp-content/uploads/2022/02/animados-gifs-de-gatos-engracados-14.gif'>"
+        catImg.src='https://gifs.eco.br/wp-content/uploads/2022/02/animados-gifs-de-gatos-engracados-14.gif'
     }
 }
 

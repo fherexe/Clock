@@ -11,7 +11,6 @@ body {
     background: #111;
     color: #fff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -30,7 +29,7 @@ main {
 }
   
 .relogio {
-  font-size: 6rem;
+  font-size: max(4em, 6.5vw); /** medida responsiva **/
 }
 
 .morning-box {
@@ -51,13 +50,16 @@ main {
   border: 2px solid #446eac;
 }
 
-#img-morning, #img-afternoon, #img-morning img {
-  position: absolute;
-  width: 300px;
-  top: 27%;
-  left: 5%;
+#cat-img {
+  object-fit: cover;
   border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 12%;  
 }
+
+
 
 
 
